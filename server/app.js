@@ -4,8 +4,9 @@ import dotenv from 'dotenv'
 import logger from 'morgan'
 import bodyParser from 'body-parser'
 import cookieParser from 'cookie-parser'
+import hogan from 'hogan-express'
 
-import webpackDevServer from '../client/webpack/dev-server'
+import webpackDevServer from '../webpack/dev-server'
 import routes from './routes'
 
 // use dotenv
@@ -15,8 +16,9 @@ dotenv.config({ silent: true })
 const app = express()
 
 // views engine
-app.set('views', path.join(__dirname, './views'))
-app.set('view engine', 'pug')
+app.engine('html', hogan)
+app.set('views', path.join(__dirname, '../views'))
+app.set('view engine', 'html')
 
 // include webpack-dev-server for development only
 if (process.env.NODE_ENV !== 'production') {
@@ -34,7 +36,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 
 // serve static files from 'public'
-app.use(express.static(path.join(__dirname, '../client/public')))
+app.use(express.static(path.join(__dirname, '../public')))
 
 // use routes
 app.use('/', routes)

@@ -18,15 +18,22 @@
     "comma-dangle": 0,
     "global-require": 0,
     "import/prefer-default-export": 0,
+    "react/jsx-filename-extension": 0,
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false
+      }
+    ]
   },
   "plugins": [
     "import"
   ],
   "parserOptions": {
     "sourceType": "module",
-    # "ecmaFeatures": {
-    #   "experimentalObjectRestSpread": true,
-    #   "jsx": true
-    # }
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    }
   }
 }
