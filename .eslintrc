@@ -1,0 +1,32 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "describe": true,
+    "it": true,
+    "before": true,
+    "after": true,
+    "beforeEach": true,
+    "afterEach": true
+  },
+  "rules": {
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "no-console": 0,
+    "no-alert": 0,
+    "comma-dangle": 0,
+    "global-require": 0,
+    "import/prefer-default-export": 0,
+  },
+  "plugins": [
+    "import"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    # "ecmaFeatures": {
+    #   "experimentalObjectRestSpread": true,
+    #   "jsx": true
+    # }
+  }
+}
