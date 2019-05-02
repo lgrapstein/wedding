@@ -5,15 +5,14 @@ import webpack from 'webpack'
 
 export default {
   devtool: 'source-map',
-  entry: path.join(process.cwd(), '/wedding/client/src/index'),
+  entry: path.join(process.cwd(), 'client/src/index'),
   output: {
     filename: 'bundle.js',
     path: path.join(process.cwd(), 'public', 'js'),
     publicPath: '/js'
   },
   plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin(true),
-    new webpack.optimize.minimize()
+    new webpack.optimize.OccurrenceOrderPlugin(true)
   ],
   module: {
     rules: [
@@ -47,7 +46,7 @@ export default {
         test: /\.(jpe?g|png|gif|ico)$/i,
         use: 'file-loader'
       },
-    ],
+    ]
   },
   target: 'web'
 }

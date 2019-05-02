@@ -23,14 +23,13 @@ export default {
   ],
   module: {
     rules: [
-
       {
         enforce: 'pre',
-        test: /\.js$/,
+        test: /\.js(x)?$/,
         use: 'eslint-loader'
       },
       {
-        test: /\.js?$/,
+        test: /\.js$/,
         use: {
           loader: 'babel-loader',
           options: {
