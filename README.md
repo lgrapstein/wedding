@@ -1,6 +1,7 @@
 # wedding
 
 React
+
 Redux for state management
 React-Router for client-side routing
 Express for server-side routing
