@@ -1,4 +1,4 @@
-# wedding
+# Wedding Website
 
 Tech Stack:
 
