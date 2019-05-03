@@ -1,6 +1,7 @@
 # wedding
 
 Tech Stack:
+
 React
 
 Redux for state management
