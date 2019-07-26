@@ -4,6 +4,7 @@ import path from 'path'
 import webpack from 'webpack'
 
 export default {
+  mode: 'production',
   devtool: 'source-map',
   entry: path.join(process.cwd(), 'client/src/index'),
   output: {

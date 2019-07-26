@@ -1,9 +1,10 @@
 // Webpack configuation for development
 
-import path from 'path'
-import webpack from 'webpack'
+const path = require('path')
+const webpack = require('webpack')
 
-export default {
+module.exports = {
+  mode: 'development',
   // allows controlling how Webpack generates source map
   devtool: 'eval-source-map',
   // entry file for the bundle
@@ -11,6 +12,10 @@ export default {
     'webpack-hot-middleware/client?reload=true',
     path.join(process.cwd(), 'client/src/index')
   ],
+  devServer: {
+    contentBase: '/js',
+    hot: true
+  },
   // where the bundle will be saved and which filename to use for it
   output: {
     filename: 'bundle.js',
